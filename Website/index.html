@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thompson Tech Solutions | Omaha&#39;s Trusted Tech Expert</title>
+  <meta name="description" content="Thompson Tech Solutions in Omaha, Nebraska — computer repair, virus removal, managed care plans, website design, and personalized tech support for homes and small businesses." />
+  <meta name="keywords" content="computer repair Omaha, tech support Omaha, managed IT Omaha, website design Omaha, Thompson Tech Solutions" />
+  <meta property="og:title" content="Thompson Tech Solutions | Omaha&#39;s Trusted Tech Expert" />
+  <meta property="og:description" content="Expert computer repair, managed care plans, and website design in Omaha, NE. Honest prices. Real expertise. Personal service." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.thompsonpcrepair.com" />
+  <link rel="canonical" href="https://www.thompsonpcrepair.com" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Thompson Tech Solutions",
+    "description": "Expert computer repair, managed care plans, and website design for homes and small businesses in Omaha, Nebraska.",
+    "telephone": "+1-402-290-7729",
+    "email": "techthompson1@gmail.com",
+    "url": "https://www.thompsonpcrepair.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6708 S 53rd St",
+      "addressLocality": "Omaha",
+      "addressRegion": "NE",
+      "postalCode": "68117",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.2100,
+      "longitude": -96.0150
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0d1f3c; --navy2: #152a50; --navy3: #1a3a6a;
+      --blue: #2d6ab4; --sky: #5ba3d9; --ice: #b8d9f0;
+      --white: #f5f9ff; --muted: rgba(184,217,240,0.55);
+      --accent: #f0a500;
+      --green: #22c55e;
+      --font-body: 'Inter', sans-serif;
+      --font-head: 'Manrope', sans-serif;
+      --radius: 16px; --radius-sm: 10px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--navy); color: var(--white); line-height: 1.6; overflow-x: hidden; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%;
+      height: 120px;
+      background: rgba(13,31,60,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(91,163,217,0.15);
+      white-space: nowrap;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 16px; text-decoration: none; }
+    .nav-logo img { height: 72px; width: 72px; display: block; flex-shrink: 0; }
+
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.08;
+    }
+    .nav-logo-main {
+      font-family: var(--font-head);
+      font-size: 1.65rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #fff;
+    }
+    .nav-logo-sub {
+      font-family: var(--font-head);
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--sky);
+      margin-top: 3px;
+    }
+    .nav-links { display: flex; gap: 1.2rem; list-style: none; white-space: nowrap; flex-wrap: nowrap; align-items: center; }
+    .nav-links a { color: rgba(245,249,255,0.78); text-decoration: none; font-size: 0.84rem; font-weight: 500; letter-spacing: 0.02em; transition: color 0.2s; white-space: nowrap; }
+    .nav-links a:hover { color: var(--sky); }
+    .nav-cta {
+      background: var(--accent) !important; color: var(--navy) !important;
+      padding: 9px 20px; border-radius: 50px;
+      font-weight: 700 !important; letter-spacing: 0.01em !important;
+      transition: opacity 0.2s !important;
+    }
+    .nav-cta:hover { opacity: 0.88; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; touch-action: manipulation; -webkit-tap-highlight-color: transparent; background: transparent !important; border: none !important; outline: none !important; box-shadow: none !important; -webkit-appearance: none !important; appearance: none !important; }
+    .hamburger span { width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: 0.3s; display: block; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── MOBILE MENU ── */
+    .mobile-menu {
+      display: none; position: fixed;
+      top: 120px; left: 0; right: 0;
+      background: rgba(13,31,60,0.98);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(91,163,217,0.2);
+      z-index: 99;
+    }
+    .mobile-menu ul { list-style: none; padding: 8px 0 16px; }
+    .mobile-menu ul li a {
+      touch-action: manipulation; display: block; padding: 14px 7%;
+      color: rgba(245,249,255,0.85); text-decoration: none;
+      font-size: 1rem; font-weight: 500;
+      border-bottom: 1px solid rgba(91,163,217,0.08);
+      transition: background 0.2s, color 0.2s;
+    }
+    .mobile-menu ul li a:hover { background: rgba(45,106,180,0.18); color: var(--sky); }
+    .mobile-menu ul li:last-child a {
+      margin: 12px 7% 0; padding: 12px 20px;
+      background: var(--accent); color: var(--navy) !important;
+      font-weight: 700; border-radius: 50px; border-bottom: none; text-align: center;
+    }
+
+    /* ── HERO ── */
+    .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 120px; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 50%, rgba(45,106,180,0.18) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(91,163,217,0.1) 0%, transparent 50%); }
+    .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(91,163,217,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(91,163,217,0.06) 1px, transparent 1px); background-size: 48px 48px; }
+    .orb { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.5; animation: pulse 8s ease-in-out infinite; }
+    .orb-1 { width: 320px; height: 320px; top: 10%; right: 5%; background: radial-gradient(circle, rgba(45,106,180,0.5), transparent); animation-delay: 0s; }
+    .orb-2 { width: 200px; height: 200px; bottom: 20%; right: 25%; background: radial-gradient(circle, rgba(91,163,217,0.4), transparent); animation-delay: 2s; }
+    .orb-3 { width: 140px; height: 140px; top: 55%; right: 8%; background: radial-gradient(circle, rgba(45,106,180,0.35), transparent); animation-delay: 4s; }
+    @keyframes pulse { 0%,100%{transform:scale(1);opacity:0.5} 50%{transform:scale(1.15);opacity:0.7} }
+    .hero-inner { position: relative; z-index: 1; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+    .hero-two-col { display: flex; align-items: flex-start; gap: 60px; }
+    .hero-left { flex: 1; min-width: 0; }
+    .hero-right { width: 300px; flex-shrink: 0; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(45,106,180,0.2); border: 1px solid rgba(91,163,217,0.3); border-radius: 50px; padding: 6px 16px; font-size: 0.78rem; font-weight: 600; color: var(--sky); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 20px; }
+    .hero-badge::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #52b852; animation: blink 1.6s ease-in-out infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    .hero h1 { font-family: var(--font-head); font-size: clamp(2.4rem,5vw,3.8rem); font-weight: 800; line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 20px; }
+    .hero h1 em { font-style: normal; color: var(--sky); }
+    .hero-sub { font-size: 1.08rem; color: rgba(245,249,255,0.75); max-width: 480px; margin-bottom: 32px; line-height: 1.7; }
+    .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: var(--navy); font-family: var(--font-head); font-weight: 700; font-size: 1rem; padding: 15px 32px; border-radius: 50px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 20px rgba(240,165,0,0.35); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(240,165,0,0.45); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 10px; background: rgba(45,106,180,0.2); color: var(--white); font-weight: 500; font-size: 0.95rem; padding: 15px 28px; border-radius: 50px; text-decoration: none; border: 1px solid rgba(91,163,217,0.35); transition: background 0.2s; }
+    .btn-secondary:hover { background: rgba(45,106,180,0.35); }
+    .hero-cta-arrow { width: 36px; height: 36px; background: var(--navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .hero-cta-arrow svg { width: 16px; height: 16px; stroke: var(--accent); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .hero-trust { display: flex; flex-wrap: wrap; gap: 20px; }
+    .trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(184,217,240,0.7); }
+    .trust-icon { width: 22px; height: 22px; fill: var(--sky); flex-shrink: 0; }
+    .hero-visual { display: flex; flex-direction: column; gap: 12px; }
+    .hero-service-card { background: rgba(21,42,80,0.85); border: 1px solid rgba(91,163,217,0.2); border-radius: var(--radius-sm); padding: 14px 18px; display: flex; align-items: center; gap: 14px; transition: border-color 0.2s, transform 0.2s; cursor: default; }
+    .hero-service-card:hover { border-color: rgba(91,163,217,0.5); transform: translateX(4px); }
+    .hero-service-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(45,106,180,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .hero-service-icon svg { width: 20px; height: 20px; stroke: var(--sky); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .hero-service-label { font-size: 0.88rem; font-weight: 600; color: var(--white); }
+    .hero-service-price { font-size: 0.78rem; color: var(--muted); }
+    .hero-cta-card { background: linear-gradient(135deg, #1a3a6a, #0d2240); border: 1px solid rgba(240,165,0,0.35); border-radius: var(--radius-sm); padding: 18px; text-align: center; margin-top: 4px; }
+    .hero-cta-card p { font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
+    .hero-cta-card a { color: var(--accent); font-family: var(--font-head); font-size: 1.3rem; font-weight: 800; text-decoration: none; display: block; }
+    .hero-cta-card small { font-size: 0.72rem; color: rgba(184,217,240,0.5); margin-top: 4px; display: block; }
+
+    /* ── SECTIONS ── */
+    section { padding: 96px 5%; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: 0.75rem; font-weight: 700; color: var(--sky); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px; }
+    .section-title { font-family: var(--font-head); font-size: clamp(1.8rem,3.5vw,2.6rem); font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
+    .section-sub { color: rgba(184,217,240,0.7); max-width: 560px; font-size: 1rem; line-height: 1.7; }
+
+    /* ── STAT STRIP ── */
+    .stat-strip { background: var(--navy2); border-top: 1px solid rgba(91,163,217,0.12); border-bottom: 1px solid rgba(91,163,217,0.12); padding: 0; }
+    .stat-strip .section-inner { display: flex; }
+    .stat-card { flex: 1; padding: 32px 24px; text-align: center; border-right: 1px solid rgba(91,163,217,0.12); }
+    .stat-card:last-child { border-right: none; }
+    .stat-num { font-family: var(--font-head); font-size: 2.2rem; font-weight: 800; color: var(--white); }
+    .stat-num span { color: var(--sky); }
+    .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+
+    /* ── SERVICES ── */
+    #services { background: var(--navy); }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; margin-top: 48px; }
+    .service-card { background: var(--navy2); border: 1px solid rgba(91,163,217,0.12); border-radius: var(--radius); padding: 28px; position: relative; overflow: hidden; transition: transform 0.2s, border-color 0.2s; cursor: default; }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--blue), var(--sky)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+    .service-card:hover { transform: translateY(-4px); border-color: rgba(91,163,217,0.3); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon { width: 52px; height: 52px; border-radius: 14px; background: rgba(45,106,180,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+    .service-icon svg { width: 26px; height: 26px; stroke: var(--blue); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .service-card h3 { font-family: var(--font-head); font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+    .service-card p { font-size: 0.88rem; color: rgba(184,217,240,0.65); line-height: 1.6; }
+
+    /* ── CARE PLANS ── */
+    #care-plans { background: linear-gradient(180deg, var(--navy) 0%, #0a1829 100%); position: relative; overflow: hidden; }
+    #care-plans::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(45,106,180,0.15) 0%, transparent 70%); }
+    .care-banner { background: linear-gradient(90deg, rgba(45,106,180,0.25), rgba(91,163,217,0.15)); border: 1px solid rgba(91,163,217,0.25); border-radius: 14px; padding: 20px 28px; margin-bottom: 48px; display: flex; align-items: center; gap: 20px; }
+    .care-banner-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(240,165,0,0.15); border: 1px solid rgba(240,165,0,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .care-banner-icon svg { width: 24px; height: 24px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .care-banner p { font-size: 1.0rem; color: rgba(245,249,255,0.88); line-height: 1.5; }
+    .care-banner strong { color: var(--white); }
+    .care-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; }
+    .care-card { background: var(--navy2); border: 1px solid rgba(91,163,217,0.15); border-radius: var(--radius); padding: 36px 28px; position: relative; transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s; }
+    .care-card:hover { transform: translateY(-5px); border-color: rgba(91,163,217,0.35); box-shadow: 0 12px 40px rgba(13,31,60,0.5); }
+    .care-card.featured { background: linear-gradient(145deg, #163260, #0d2a52); border-color: rgba(91,163,217,0.45); transform: scale(1.03); box-shadow: 0 12px 48px rgba(45,106,180,0.3); }
+    .care-card.featured:hover { transform: scale(1.03) translateY(-5px); }
+    .care-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--navy); font-family: var(--font-head); font-size: 0.7rem; font-weight: 700; padding: 4px 16px; border-radius: 50px; white-space: nowrap; letter-spacing: 0.04em; text-transform: uppercase; }
+    .care-tier { font-size: 0.72rem; font-weight: 700; color: var(--sky); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
+    .care-name { font-family: var(--font-head); font-size: 1.3rem; font-weight: 800; margin-bottom: 4px; }
+    .care-price { font-family: var(--font-head); font-size: 2.4rem; font-weight: 800; line-height: 1; margin-bottom: 4px; }
+    .care-price small { font-size: 1rem; font-weight: 400; color: var(--muted); }
+    .care-price-range { font-size: 0.78rem; color: rgba(184,217,240,0.5); margin-bottom: 16px; }
+    .care-desc { font-size: 0.86rem; color: rgba(184,217,240,0.7); line-height: 1.55; margin-bottom: 24px; border-top: 1px solid rgba(91,163,217,0.12); padding-top: 16px; }
+    .care-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .care-features li { font-size: 0.86rem; color: rgba(184,217,240,0.85); display: flex; align-items: flex-start; gap: 9px; line-height: 1.4; }
+    .care-features li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .care-cta { display: block; text-align: center; padding: 13px; border-radius: 50px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: opacity 0.2s, transform 0.2s; background: rgba(45,106,180,0.25); color: var(--sky); border: 1px solid rgba(91,163,217,0.3); }
+    .care-card.featured .care-cta { background: var(--accent); color: var(--navy); border: none; }
+    .care-cta:hover { opacity: 0.85; transform: translateY(-1px); }
+
+    /* ── WHY US ── */
+    #why { background: linear-gradient(180deg, var(--navy) 0%, var(--navy2) 100%); }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .why-points { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+    .why-point { display: flex; gap: 18px; align-items: flex-start; }
+    .why-card-icon { width: 38px; height: 38px; border-radius: 10px; background: rgba(91,163,217,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .why-card-icon svg { width: 20px; height: 20px; stroke: var(--sky); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .why-point h4 { font-family: var(--font-head); font-size: 0.98rem; font-weight: 700; margin-bottom: 4px; }
+    .why-point p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+    .why-checks { margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .why-check { display: flex; align-items: center; gap: 10px; font-size: 0.88rem; }
+    .why-check-icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(45,106,180,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .why-check svg { width: 16px; height: 16px; stroke: white; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .why-value-cards { display: flex; flex-direction: column; gap: 16px; }
+    .why-val-card { display: flex; align-items: flex-start; gap: 18px; background: var(--navy2); border: 1px solid rgba(91,163,217,0.15); border-radius: var(--radius); padding: 22px 24px; transition: border-color 0.2s, transform 0.2s; }
+    .why-val-card:hover { border-color: rgba(91,163,217,0.35); transform: translateX(4px); }
+    .why-val-icon { width: 46px; height: 46px; border-radius: 12px; background: rgba(45,106,180,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .why-val-icon svg { width: 22px; height: 22px; stroke: var(--sky); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .why-val-card h4 { font-family: var(--font-head); font-size: 0.98rem; font-weight: 700; margin-bottom: 5px; color: var(--white); }
+    .why-val-card p { font-size: 0.86rem; color: rgba(184,217,240,0.7); line-height: 1.6; }
+
+    /* ── HOW IT WORKS ── */
+    #process { background: var(--navy); }
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 56px; position: relative; }
+    .process-steps::before { content: ''; position: absolute; top: 28px; left: calc(12.5% + 16px); right: calc(12.5% + 16px); height: 1px; background: linear-gradient(90deg, transparent, rgba(91,163,217,0.3) 20%, rgba(91,163,217,0.3) 80%, transparent); }
+    .process-step { text-align: center; position: relative; }
+    .step-num { width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--blue), var(--sky)); display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; margin: 0 auto 18px; box-shadow: 0 4px 20px rgba(45,106,180,0.4); }
+    .process-step h4 { font-family: var(--font-head); font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; }
+    .process-step p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── PRICING ── */
+    #pricing { background: linear-gradient(180deg, var(--navy2) 0%, var(--navy) 100%); }
+    .pricing-section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 16px; flex-wrap: wrap; gap: 16px; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; }
+    .pricing-card { background: var(--navy2); border: 1px solid rgba(91,163,217,0.12); border-radius: var(--radius); padding: 32px 24px; position: relative; transition: transform 0.2s; }
+    .pricing-card.featured { background: linear-gradient(135deg, #1a3a6a, #0d2a52); border-color: rgba(91,163,217,0.4); transform: scale(1.04); box-shadow: 0 8px 40px rgba(45,106,180,0.25); }
+    .pricing-card:hover { transform: translateY(-4px); }
+    .pricing-card.featured:hover { transform: scale(1.04) translateY(-4px); }
+    .pricing-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--navy); font-family: var(--font-head); font-size: 0.7rem; font-weight: 700; padding: 4px 14px; border-radius: 50px; white-space: nowrap; letter-spacing: 0.03em; }
+    .pricing-type { font-size: 0.75rem; font-weight: 700; color: var(--sky); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+    .pricing-price { font-family: var(--font-head); font-size: 2.4rem; font-weight: 800; margin-bottom: 4px; }
+    .pricing-price small { font-size: 0.95rem; font-weight: 400; color: var(--muted); }
+    .pricing-desc { font-size: 0.83rem; color: var(--muted); margin-bottom: 20px; line-height: 1.5; }
+    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
+    .pricing-features li { font-size: 0.84rem; color: rgba(184,217,240,0.8); display: flex; align-items: flex-start; gap: 8px; }
+    .pricing-features li::before { content: '✓'; color: var(--sky); font-weight: 700; flex-shrink: 0; }
+    .pricing-cta { display: block; text-align: center; padding: 11px; border-radius: 50px; font-weight: 600; font-size: 0.88rem; text-decoration: none; transition: opacity 0.2s; background: rgba(45,106,180,0.25); color: var(--sky); border: 1px solid rgba(91,163,217,0.3); }
+    .pricing-card.featured .pricing-cta { background: var(--accent); color: var(--navy); border: none; }
+    .pricing-cta:hover { opacity: 0.82; }
+    .pricing-web-note { background: rgba(45,106,180,0.12); border: 1px solid rgba(91,163,217,0.2); border-radius: 12px; padding: 18px 24px; margin-top: 28px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: space-between; }
+    .pricing-web-note p { font-size: 0.9rem; color: rgba(184,217,240,0.85); line-height: 1.5; }
+    .pricing-web-note strong { color: var(--white); }
+    .pricing-web-note a { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--navy); font-family: var(--font-head); font-weight: 700; font-size: 0.88rem; padding: 10px 22px; border-radius: 50px; text-decoration: none; white-space: nowrap; transition: opacity 0.2s; }
+    .pricing-web-note a:hover { opacity: 0.88; }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { background: var(--navy); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+    .testimonial-card { background: var(--navy2); border: 1px solid rgba(91,163,217,0.1); border-radius: var(--radius); padding: 28px; }
+    .stars { color: var(--accent); font-size: 0.9rem; margin-bottom: 12px; letter-spacing: 2px; }
+    .testimonial-card blockquote { font-size: 0.92rem; color: rgba(184,217,240,0.85); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+    .testimonial-author { font-size: 0.82rem; font-weight: 600; color: var(--sky); }
+    .testimonial-location { font-size: 0.75rem; color: var(--muted); }
+
+    /* ── CONTACT ── */
+    #contact { background: linear-gradient(180deg, var(--navy2) 0%, var(--navy) 100%); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 60px; align-items: flex-start; }
+    .contact-info { display: flex; flex-direction: column; gap: 20px; }
+    .contact-item { display: flex; gap: 16px; align-items: flex-start; }
+    .contact-item-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(45,106,180,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contact-item-icon svg { width: 20px; height: 20px; stroke: var(--sky); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .contact-item-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; }
+    .contact-item-val { font-size: 0.98rem; font-weight: 500; }
+    .contact-item-val a { color: var(--white); text-decoration: none; }
+    .contact-item-val a:hover { color: var(--sky); }
+    .contact-form-wrap { background: var(--navy2); border: 1px solid rgba(91,163,217,0.12); border-radius: var(--radius); padding: 36px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-group label { font-size: 0.8rem; font-weight: 600; color: rgba(184,217,240,0.8); letter-spacing: 0.04em; }
+    .form-group input, .form-group select, .form-group textarea {
+      background: rgba(13,31,60,0.6); border: 1px solid rgba(91,163,217,0.2);
+      border-radius: 10px; padding: 11px 16px; color: var(--white); font-size: 0.92rem;
+      font-family: var(--font-body); transition: border-color 0.2s; outline: none;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: rgba(91,163,217,0.6); }
+    .form-group textarea { min-height: 100px; resize: vertical; }
+    .form-group select option { background: var(--navy2); }
+    .form-checkboxes { display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
+    .form-checkbox { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+    .form-checkbox input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--sky); cursor: pointer; }
+    .form-checkbox span { font-size: 0.85rem; color: rgba(184,217,240,0.8); }
+    .form-checkbox-label { font-size: 0.78rem; font-weight: 600; color: rgba(184,217,240,0.8); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 8px; display: block; }
+    .btn-submit {
+      width: 100%; padding: 15px; border-radius: 50px; border: none; cursor: pointer;
+      background: linear-gradient(90deg, var(--blue), var(--sky));
+      color: white; font-family: var(--font-head); font-weight: 700; font-size: 1rem;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-submit:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--navy2); border-top: 1px solid rgba(91,163,217,0.1); padding: 64px 5% 40px; }
+    .footer-grid { max-width: 1200px; margin: 0 auto 48px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; }
+    .footer-brand p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; margin: 12px 0 20px; max-width: 280px; }
+    .footer-col h4 { font-family: var(--font-head); font-size: 0.85rem; font-weight: 700; color: var(--white); margin-bottom: 16px; letter-spacing: 0.05em; text-transform: uppercase; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: rgba(184,217,240,0.65); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--sky); }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; border-top: 1px solid rgba(91,163,217,0.15); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 0.8rem; color: rgba(184,217,240,0.5); }
+
+    /* ── FLOATING CTA ── */
+    .floating-cta { position: fixed; bottom: 28px; right: 28px; z-index: 90; }
+    .floating-btn { display: flex; align-items: center; gap: 10px; background: var(--accent); color: var(--navy); font-family: var(--font-head); font-weight: 700; font-size: 0.92rem; padding: 14px 22px; border-radius: 50px; text-decoration: none; box-shadow: 0 6px 28px rgba(240,165,0,0.45); transition: transform 0.2s, box-shadow 0.2s; }
+    .floating-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(240,165,0,0.55); }
+    .floating-btn svg { width: 18px; height: 18px; fill: var(--navy); flex-shrink: 0; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 1100px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero { padding-top: 120px; }
+      .hero-two-col { flex-direction: column; gap: 36px; }
+      .hero-right { max-width: 100%; margin-left: 0; width: 100%; }
+      .hero-visual { display: none; }
+      .why-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .form-row { grid-template-columns: 1fr; }
+      .pricing-card.featured { transform: none; }
+      .care-card.featured { transform: none; }
+      .process-steps::before { display: none; }
+      .stat-card { border-radius: var(--radius) !important; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr 1fr; }
+      .care-grid { grid-template-columns: 1fr; gap: 20px; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-buttons { flex-direction: column; }
+      .btn-primary, .btn-secondary { text-align: center; justify-content: center; }
+      .process-steps { grid-template-columns: 1fr; }
+      .why-checks { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="Logo_OnlySquare_White.png" alt="Thompson Tech Solutions" />
+    <div class="nav-logo-text">
+      <span class="nav-logo-main">THOMPSON</span>
+      <span class="nav-logo-sub">TECH SOLUTIONS</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#care-plans">Care Plans</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#process">How It Works</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Get Help Now</a></li>
+  </ul>
+  <button class="hamburger" id="ham-btn" onclick="var m=document.getElementById('mob-nav'),b=document.getElementById('ham-btn');if(m.style.display==='block'){m.style.display='none';b.classList.remove('open');}else{m.style.display='block';b.classList.add('open');}" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU DRAWER -->
+<div class="mobile-menu" id="mob-nav" style="display:none;">
+  <ul>
+    <li><a href="#services" onclick="document.getElementById('mob-nav').style.display='none';document.getElementById('ham-btn').classList.remove('open');">Services</a></li>
+    <li><a href="#care-plans" onclick="document.getElementById('mob-nav').style.display='none';document.getElementById('ham-btn').classList.remove('open');">Care Plans</a></li>
+    <li><a href="#why" onclick="document.getElementById('mob-nav').style.display='none';document.getElementById('ham-btn').classList.remove('open');">Why Us</a></li>
+    <li><a href="#process" onclick="document.getElementById('mob-nav').style.display='none';document.getElementById('ham-btn').classList.remove('open');">How It Works</a></li>
+    <li><a href="#pricing" onclick="document.getElementById('mob-nav').style.display='none';document.getElementById('ham-btn').classList.remove('open');">Pricing</a></li>
+    <li><a href="#testimonials" onclick="document.getElementById('mob-nav').style.display='none';document.getElementById('ham-btn').classList.remove('open');">Reviews</a></li>
+    <li><a href="#contact" onclick="document.getElementById('mob-nav').style.display='none';document.getElementById('ham-btn').classList.remove('open');">Get Help Now</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="hero-inner">
+    <div class="hero-two-col">
+      <div class="hero-left">
+        <div class="hero-badge">Available Now &mdash; Omaha, NE</div>
+        <h1>Expert Tech Help.<br><em>Personal Touch.</em></h1>
+        <p class="hero-sub">Todd Thompson brings 15+ years of hands-on experience directly to you. Computer repair, managed protection plans, and website design &mdash; done right, at honest prices.</p>
+        <div class="hero-buttons">
+          <a href="tel:+14022907729" class="btn-primary">
+            <div class="hero-cta-arrow"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16l.19.92Z"/></svg></div>
+            Call or Text Now
+          </a>
+          <a href="#care-plans" class="btn-secondary">See Care Plans &rarr;</a>
+        </div>
+        <div class="hero-trust">
+          <span class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>5-Star Google Rating</span>
+          <span class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>15+ Years Experience</span>
+          <span class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Omaha Locals Served</span>
+          <span class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Same-Day Available</span>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-visual">
+          <div class="hero-service-card">
+            <div class="hero-service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <div><div class="hero-service-label">Computer Repair</div><div class="hero-service-price">Diagnostics from $49</div></div>
+          </div>
+          <div class="hero-service-card">
+            <div class="hero-service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><div class="hero-service-label">Virus &amp; Malware Removal</div><div class="hero-service-price">Starting at $89</div></div>
+          </div>
+          <div class="hero-service-card">
+            <div class="hero-service-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+            <div><div class="hero-service-label">Website Design</div><div class="hero-service-price">Starting at $499 + $49/mo</div></div>
+          </div>
+          <div class="hero-service-card">
+            <div class="hero-service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+            <div><div class="hero-service-label">Monthly Care Plans</div><div class="hero-service-price">From $29/mo &mdash; no surprises</div></div>
+          </div>
+          <div class="hero-service-card">
+            <div class="hero-service-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16l.19.92Z"/></svg></div>
+            <div><div class="hero-service-label">Remote Support</div><div class="hero-service-price">Help without leaving home</div></div>
+          </div>
+          <div class="hero-cta-card">
+            <p>Call or text Todd anytime</p>
+            <a href="tel:+14022907729">(402) 290-7729</a>
+            <small>Mon&ndash;Sun &nbsp;8am&ndash;7pm</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stat-strip">
+  <div class="section-inner">
+    <div class="stat-card"><div class="stat-num">15<span>+</span></div><div class="stat-label">Years Experience</div></div>
+    <div class="stat-card"><div class="stat-num">500<span>+</span></div><div class="stat-label">Omaha Customers</div></div>
+    <div class="stat-card"><div class="stat-num">5<span>★</span></div><div class="stat-label">Google Rating</div></div>
+    <div class="stat-card"><div class="stat-num">24<span>hr</span></div><div class="stat-label">Avg Turnaround</div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Services for Every Tech Need</h2>
+    <p class="section-sub">From slow laptops to complete website builds &mdash; Todd handles it all with clear communication and honest pricing.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3>Computer Repair &amp; Diagnostics</h3>
+        <p>Slow PCs, blue screens, boot failures, hardware faults. Get your PC feeling fast and secure again &mdash; with transparent pricing before any work begins.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Virus &amp; Malware Removal</h3>
+        <p>Deep-cleaning of ransomware, spyware, adware, and browser hijackers. Security hardening included so you stay protected.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3>PC Upgrades &amp; Migration</h3>
+        <p>RAM, SSD, and GPU upgrades. Windows 11 migration, new PC setup, and data transfer &mdash; everything moved over safely and quickly.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div>
+        <h3>Wi-Fi &amp; Network Setup</h3>
+        <p>Whole-home Wi-Fi coverage, mesh systems, router configuration, and network security. No dead zones, no slow spots.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+        <h3>Data Backup &amp; Recovery</h3>
+        <p>Recover deleted files, failed drives, and crashed systems. Set up automatic cloud and local backups so it never happens again.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16l.19.92Z"/></svg></div>
+        <h3>Remote Support Sessions</h3>
+        <p>Secure screen-sharing for software issues, settings changes, and quick fixes &mdash; no need to leave the house.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Smart Home &amp; Device Setup</h3>
+        <p>Alexa, Google Home, smart TVs, streaming devices, and security cameras. Setup, integration, and troubleshooting made easy.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <h3>Small Business IT Support</h3>
+        <p>Network setup, workstation maintenance, printer and scanner troubleshooting, and ongoing IT support for small Omaha businesses.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <h3>Website Design &amp; Hosting</h3>
+        <p>Clean, modern 5&ndash;8 page websites for small businesses and individuals. Built fast, launched right, with optional monthly care so it stays fresh.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+        <h3>Mobile &amp; Tablet Support</h3>
+        <p>iPhone, Android, and iPad help. App setup, data backup, email configuration, and troubleshooting for all mobile devices.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
+        <h3>AI-Ready PC Builds &amp; Setup</h3>
+        <p>Upgrade or build a PC ready for AI tools like ChatGPT, Copilot, and local AI models. Future-proof hardware and software configuration.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <h3>Performance Tune-Up</h3>
+        <p>Startup optimization, junk file cleanup, driver updates, and thermal maintenance. Make your existing PC feel new again &mdash; fast.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARE PLANS -->
+<section id="care-plans">
+  <div class="section-inner" style="position:relative;z-index:1;">
+    <div class="section-label">Ongoing Care Plans</div>
+    <h2 class="section-title">Stop Fighting the Same Fires.<br>Get <em style="font-style:normal;color:var(--sky);">Proactive Protection.</em></h2>
+    <p class="section-sub" style="max-width:600px;">One recurring monthly fee. Predictable costs. Problems caught before they cost you &mdash; so your tech just works.</p>
+    <div class="care-banner" style="margin-top:32px;">
+      <div class="care-banner-icon">
+        <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      </div>
+      <p><strong>The average emergency PC repair costs $149&ndash;$299.</strong> A Care Plan pays for itself the moment it prevents one. Most of our plan members go a full year without a single emergency repair.</p>
+    </div>
+    <div class="care-grid" style="margin-top:40px;">
+
+      <div class="care-card">
+        <div class="care-tier">Home</div>
+        <div class="care-name">Basic Plan</div>
+        <div class="care-price">$29<small>/mo</small></div>
+        <div class="care-price-range">or $34/mo billed month-to-month</div>
+        <div class="care-desc">Perfect for single-user households who want peace of mind without the drama of surprise tech failures.</div>
+        <ul class="care-features">
+          <li>Priority remote support response</li>
+          <li>Monthly automated health checks</li>
+          <li>Security &amp; Windows updates managed</li>
+          <li>1 free tune-up per year</li>
+          <li>Basic backup monitoring</li>
+          <li>Email &amp; phone support</li>
+        </ul>
+        <a href="#contact" class="care-cta">Start Basic Plan</a>
+      </div>
+
+      <div class="care-card featured">
+        <div class="care-badge">Most Popular</div>
+        <div class="care-tier">Home</div>
+        <div class="care-name">Premium Plan</div>
+        <div class="care-price">$49<small>/mo</small></div>
+        <div class="care-price-range">or $55/mo billed month-to-month</div>
+        <div class="care-desc">Everything in Basic, plus hands-on on-site visits, complete data backup management, and support for your whole household.</div>
+        <ul class="care-features">
+          <li>Everything in Home Basic</li>
+          <li>On-site priority scheduling</li>
+          <li>Full data backup management</li>
+          <li>Quarterly system reviews</li>
+          <li>Family multi-device support (up to 3)</li>
+          <li>Printer &amp; peripheral support</li>
+          <li>Annual security assessment</li>
+        </ul>
+        <a href="#contact" class="care-cta">Start Premium Plan</a>
+      </div>
+
+      <div class="care-card">
+        <div class="care-tier">Small Business</div>
+        <div class="care-name">Business Care</div>
+        <div class="care-price">$99<small>/mo</small></div>
+        <div class="care-price-range">per workstation &mdash; flat rate plans available</div>
+        <div class="care-desc">Proactive monitoring, endpoint protection, and a real IT partner for your small business &mdash; without the big business price tag.</div>
+        <ul class="care-features">
+          <li>Remote helpdesk hours included</li>
+          <li>Proactive endpoint monitoring</li>
+          <li>Endpoint protection &amp; antivirus managed</li>
+          <li>Patch management &amp; updates</li>
+          <li>Quarterly business reviews</li>
+          <li>Printer &amp; peripheral management</li>
+          <li>Website maintenance add-on available</li>
+        </ul>
+        <a href="#contact" class="care-cta">Get Business Care</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="section-inner">
+    <div class="why-grid">
+      <div>
+        <div class="section-label">Why Todd</div>
+        <h2 class="section-title">Real Expertise. Real Service. Real Results.</h2>
+        <p class="section-sub">Todd Thompson is an Omaha-based technician who treats every customer like a neighbor &mdash; because most of them are.</p>
+        <div class="why-points">
+          <div class="why-point">
+            <div class="why-card-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div><h4>You Talk to Todd, Not a Call Center</h4><p>Work one-on-one with a certified technician with 15+ years of hands-on experience, not a junior employee reading from a script.</p></div>
+          </div>
+          <div class="why-point">
+            <div class="why-card-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div><h4>Honest, Upfront Pricing</h4><p>You'll know exactly what it costs before any work starts. No hidden fees, no surprise invoices. Flat rates on most common repairs.</p></div>
+          </div>
+          <div class="why-point">
+            <div class="why-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <div><h4>Same-Day &amp; Weekend Service</h4><p>Available Monday through Sunday 8am&ndash;7pm. Most repairs completed same day or next day. Remote support often within the hour.</p></div>
+          </div>
+          <div class="why-point">
+            <div class="why-card-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+            <div><h4>Websites &amp; Ongoing Digital Support</h4><p>Todd also helps small businesses get online with clean, modern websites and monthly maintenance &mdash; a natural extension of the tech support relationship you already trust.</p></div>
+          </div>
+        </div>
+        <div class="why-checks">
+          <div class="why-check"><div class="why-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span>No fix, no fee guarantee</span></div>
+          <div class="why-check"><div class="why-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span>Certified technician</span></div>
+          <div class="why-check"><div class="why-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span>On-site or remote options</span></div>
+          <div class="why-check"><div class="why-check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span>Serving Omaha, Bellevue &amp; surrounding communities</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="why-value-cards">
+          <div class="why-val-card">
+            <div class="why-val-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><h4>Your Data Stays Private</h4><p>We never access files beyond what's needed for your repair, and we'll always ask permission first.</p></div>
+          </div>
+          <div class="why-val-card">
+            <div class="why-val-icon"><svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
+            <div><h4>AI-Ready Upgrades</h4><p>We evaluate your hardware and recommend upgrades to run modern AI tools like Copilot, ChatGPT, and more at full speed.</p></div>
+          </div>
+          <div class="why-val-card">
+            <div class="why-val-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div><h4>Plain-English Explanations</h4><p>We'll tell you exactly what's wrong and what we're doing &mdash; in language that actually makes sense, not tech jargon.</p></div>
+          </div>
+          <div class="why-val-card">
+            <div class="why-val-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+            <div><h4>Simple Websites, Monthly Care</h4><p>Build once, maintain monthly. Todd helps small businesses and individuals get online with sites that look great and stay updated.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="process">
+  <div class="section-inner">
+    <div class="section-label">The Process</div>
+    <h2 class="section-title">Simple From Start to Finish</h2>
+    <p class="section-sub">Getting your tech fixed &mdash; or your website built &mdash; is easier than you think. No jargon. No runaround. Just results.</p>
+    <div class="process-steps">
+      <div class="process-step"><div class="step-num">1</div><h4>Reach Out</h4><p>Call, text, or fill out the form. Describe your issue and we'll find the right solution &mdash; usually within the hour.</p></div>
+      <div class="process-step"><div class="step-num">2</div><h4>Get a Quote</h4><p>Receive a clear, honest estimate before any work begins. Remote, drop-off, on-site, or Care Plan &mdash; you choose.</p></div>
+      <div class="process-step"><div class="step-num">3</div><h4>We Fix It</h4><p>Todd gets to work. Most repairs are done same-day. You'll get updates throughout so you always know where things stand.</p></div>
+      <div class="process-step"><div class="step-num">4</div><h4>You're Back Online</h4><p>Pick up your device or reconnect remotely. We walk you through what was done and how to prevent it from happening again.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-inner">
+    <div class="section-label">Transparent Pricing</div>
+    <h2 class="section-title">Fair Rates. No Surprises.</h2>
+    <p class="section-sub">Flat-rate pricing on most common repairs. Complex jobs quoted before work begins. No hidden fees, ever.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-type">Remote Support</div>
+        <div class="pricing-price">$89<small>/session</small></div>
+        <p class="pricing-desc">Secure screen-sharing for software issues, settings, and quick fixes. No travel needed.</p>
+        <ul class="pricing-features">
+          <li>Software troubleshooting</li>
+          <li>Settings &amp; configuration</li>
+          <li>Virus &amp; malware scans</li>
+          <li>Up to 1 hour session</li>
+          <li>Follow-up support included</li>
+        </ul>
+        <a href="#contact" class="pricing-cta">Book Remote Session</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-type">In-Shop / Drop-Off</div>
+        <div class="pricing-price">$89<small>/flat rate</small></div>
+        <p class="pricing-desc">Drop off at 6708 S 53rd St. Most repairs completed same day or next morning.</p>
+        <ul class="pricing-features">
+          <li>Full hardware diagnostics</li>
+          <li>Virus &amp; malware removal</li>
+          <li>OS repair &amp; reinstall</li>
+          <li>Data backup before work</li>
+          <li>Parts quoted separately</li>
+        </ul>
+        <a href="#contact" class="pricing-cta">Schedule Drop-Off</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-type">On-Site Visit</div>
+        <div class="pricing-price">$129<small>/visit</small></div>
+        <p class="pricing-desc">We come to you across the greater Omaha metro area.</p>
+        <ul class="pricing-features">
+          <li>Network &amp; Wi-Fi setup</li>
+          <li>Multi-device support</li>
+          <li>Smart home installation</li>
+          <li>Business IT support</li>
+          <li>Additional hours $89/hr</li>
+        </ul>
+        <p style="font-size:0.72rem; color:rgba(184,217,240,0.6); margin-top:12px; line-height:1.4;">*Travel fees may apply outside Bellevue, Papillion, La Vista, Ralston &amp; Millard — ask for a free quote.</p>
+        <a href="#contact" class="pricing-cta">Schedule On-Site</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-type">Monthly Care Plans</div>
+        <div class="pricing-price">$29<small>/mo</small></div>
+        <p class="pricing-desc">Ongoing proactive protection, priority support, and zero surprise bills. Starting at $29/mo for homes.</p>
+        <ul class="pricing-features">
+          <li>Home Basic from $29/mo</li>
+          <li>Home Premium from $49/mo</li>
+          <li>Business Care from $99/mo</li>
+          <li>Priority response guaranteed</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <a href="#care-plans" class="pricing-cta">View All Care Plans</a>
+      </div>
+    </div>
+    <div class="pricing-web-note">
+      <p><strong>Need a website?</strong> Clean, modern 5&ndash;8 page sites starting at <strong>$499</strong> one-time setup. Add optional monthly maintenance &amp; hosting for just <strong>$49/mo</strong> &mdash; includes updates, security, and uptime monitoring. Perfect for small businesses and individuals ready to get online.</p>
+      <a href="#contact">Get a Website Quote &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-inner">
+    <div class="section-label">Customer Reviews</div>
+    <h2 class="section-title">What Omaha Customers Are Saying</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;Todd fixed my laptop in less than 2 hours. It had been running slow for months and I thought I needed a new one. Saved me hundreds of dollars and explained everything clearly.&rdquo;</blockquote>
+        <div class="testimonial-author">Sarah M.</div>
+        <div class="testimonial-location">Millard, Omaha</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;Got hit with ransomware and panicked. Todd was at my house within 3 hours, cleaned everything up, and set up proper backups so it won't happen again. Absolutely amazing service.&rdquo;</blockquote>
+        <div class="testimonial-author">Jim K.</div>
+        <div class="testimonial-location">Papillion, NE</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;I run a small business and Todd is our go-to for everything tech. Fast, reliable, and honest. He's upgraded 4 of our workstations and set up our whole office network.&rdquo;</blockquote>
+        <div class="testimonial-author">Maria L.</div>
+        <div class="testimonial-location">La Vista, NE</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label">Get in Touch</div>
+    <h2 class="section-title">Ready to Fix Your Tech?</h2>
+    <p class="section-sub">Reach out by phone, email, or the form and we'll get back to you fast. Most inquiries answered within 1 hour during business hours.</p>
+    <div class="contact-grid" style="margin-top:48px">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16l.19.92Z"/></svg></div>
+          <div><div class="contact-item-label">Phone / Text</div><div class="contact-item-val"><a href="tel:+14022907729">(402) 290-7729</a></div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="contact-item-label">Email</div><div class="contact-item-val"><a href="mailto:techthompson1@gmail.com">techthompson1@gmail.com</a></div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="contact-item-label">Drop-Off Address</div><div class="contact-item-val">6708 S 53rd St, Omaha, NE 68117</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div><div class="contact-item-label">Hours</div><div class="contact-item-val">Monday &ndash; Sunday, 8am &ndash; 7pm</div></div>
+        </div>
+        <div style="margin-top:12px;padding:20px;background:rgba(45,106,180,0.12);border:1px solid rgba(91,163,217,0.2);border-radius:12px;">
+          <p style="font-size:0.85rem;color:rgba(184,217,240,0.8);line-height:1.6;"><strong style="color:var(--white);">Facebook:</strong> Connect with us and see what our neighbors are saying at <a href="https://www.facebook.com/DVDDude" target="_blank" style="color:var(--sky);text-decoration:none;">facebook.com/DVDDude</a></p>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <h3 style="font-family:var(--font-head);font-size:1.15rem;margin-bottom:20px;">Send a Message</h3>
+        <form id="contact-form" action="https://formspree.io/f/mjgepbzb" method="POST">
+          <input type="hidden" name="_subject" value="New Thompson Tech Solutions Inquiry" />
+          <input type="hidden" name="_next" value="https://www.thompsonpcrepair.com/#contact" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(402) 555-0000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option value="">&mdash; Select a service &mdash;</option>
+              <option>Computer Repair / Diagnostics</option>
+              <option>Virus &amp; Malware Removal</option>
+              <option>PC Upgrade / Migration</option>
+              <option>Wi-Fi / Network Setup</option>
+              <option>Mobile Device Support</option>
+              <option>Data Backup &amp; Recovery</option>
+              <option>Remote Support Session</option>
+              <option>Small Business IT Support</option>
+              <option>Tech Training</option>
+              <option>AI / Software Setup</option>
+              <option>Monthly Care Plan Inquiry</option>
+              <option>Website Design / Hosting Inquiry</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom:8px;">
+            <span class="form-checkbox-label">I&#39;m also interested in: (optional)</span>
+            <div class="form-checkboxes">
+              <label class="form-checkbox">
+                <input type="checkbox" name="interest_care_plan" value="Yes" />
+                <span>Monthly Maintenance / Care Plan</span>
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" name="interest_website" value="Yes" />
+                <span>Website Design &amp; Hosting</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Describe Your Issue</label>
+            <textarea id="message" name="message" placeholder="Tell us what's going on &mdash; as much or as little detail as you like..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Message &mdash; We'll Respond Fast &#10003;</button>
+          <p id="form-status" style="font-size:0.82rem;text-align:center;margin-top:12px;min-height:20px;"></p>
+          <p style="font-size:0.78rem;color:var(--muted);text-align:center;margin-top:6px;">&#128274; Your information is private and never shared or sold.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="Thompson_Tech_Solutions_Logo_White.png" alt="Thompson Tech Solutions" style="height:165px;width:auto;display:block;margin-bottom:8px;" />
+      <p>Omaha&#39;s trusted local tech expert. Computer repair, managed care plans, and website design. Personal service. Fair prices. Real results.</p>
+      <div style="display:flex;gap:12px;">
+        <a href="https://www.facebook.com/DVDDude" target="_blank" aria-label="Facebook" style="width:36px;height:36px;border-radius:8px;background:rgba(91,163,217,0.15);display:flex;align-items:center;justify-content:center;color:var(--sky);text-decoration:none;font-size:0.85rem;font-weight:700;">f</a>
+        <a href="https://www.google.com/maps/search/6708+S+53rd+St+Omaha+NE+68117" target="_blank" aria-label="Google Maps" style="width:36px;height:36px;border-radius:8px;background:rgba(91,163,217,0.15);display:flex;align-items:center;justify-content:center;color:var(--sky);text-decoration:none;font-size:0.7rem;font-weight:700;">&#9733;</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Computer Repair</a></li>
+        <li><a href="#services">Virus Removal</a></li>
+        <li><a href="#services">PC Upgrades</a></li>
+        <li><a href="#services">Wi-Fi Setup</a></li>
+        <li><a href="#services">Remote Support</a></li>
+        <li><a href="#services">Data Recovery</a></li>
+        <li><a href="#services">Website Design</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Care Plans</h4>
+      <ul>
+        <li><a href="#care-plans">Home Basic &mdash; $29/mo</a></li>
+        <li><a href="#care-plans">Home Premium &mdash; $49/mo</a></li>
+        <li><a href="#care-plans">Business Care &mdash; $99/mo</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#pricing">All Pricing</a></li>
+        <li><a href="#contact">Start a Plan</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+14022907729">(402) 290-7729</a></li>
+        <li><a href="mailto:techthompson1@gmail.com">techthompson1@gmail.com</a></li>
+        <li><a href="#contact">Schedule Online</a></li>
+        <li style="color:rgba(184,217,240,0.5);font-size:0.82rem;padding-top:4px;">6708 S 53rd St, Omaha, NE<br>Mon&ndash;Sun 8am&ndash;7pm</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Thompson Tech Solutions, Omaha NE. All rights reserved.</p>
+    <p>Serving Omaha, Bellevue, Papillion, La Vista, Ralston, Millard &amp; nearby communities.</p>
+  </div>
+</footer>
+
+<div class="floating-cta">
+  <a href="tel:+14022907729" class="floating-btn">
+    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16l.19.92Z"/></svg>
+    Call Now
+  </a>
+</div>
+
+<script>
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      var nav = document.getElementById('mob-nav');
+      var btn = document.getElementById('ham-btn');
+      if (nav) nav.style.display = 'none';
+      if (btn) btn.classList.remove('open');
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.boxShadow = window.scrollY > 60 ? '0 4px 32px rgba(13,31,60,0.4)' : 'none';
+  });
+
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 1100) {
+      document.getElementById('mob-nav').style.display = 'none';
+      document.getElementById('ham-btn').classList.remove('open');
+    }
+  });
+
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = contactForm.querySelector('.btn-submit');
+      const status = document.getElementById('form-status');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          btn.textContent = '\u2713 Message Sent! Todd will be in touch shortly.';
+          btn.style.background = 'linear-gradient(90deg, #2d8a2d, #52b852)';
+          status.style.color = '#2d8a2d';
+          status.textContent = '';
+          contactForm.reset();
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (err) {
+        btn.textContent = "Send Message \u2014 We'll Respond Fast \u2713";
+        btn.disabled = false;
+        status.style.color = '#e05050';
+        status.textContent = 'Something went wrong. Please call or email us directly.';
+      }
+    });
+  }
+</script>
+</body>
+</html>
