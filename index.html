@@ -9,8 +9,8 @@
   <meta property="og:title" content="Thompson Tech Solutions | Omaha&#39;s Trusted Tech Expert" />
   <meta property="og:description" content="Expert computer repair, managed care plans, and website design in Omaha, NE. Honest prices. Real expertise. Personal service." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.thompsontechsolutions.net" />
-  <link rel="canonical" href="https://www.thompsontechsolutions.net" />
+  <meta property="og:url" content="https://www.thompsonpcrepair.com" />
+  <link rel="canonical" href="https://www.thompsonpcrepair.com" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -19,7 +19,7 @@
     "description": "Expert computer repair, managed care plans, and website design for homes and small businesses in Omaha, Nebraska.",
     "telephone": "+1-402-290-7729",
     "email": "techthompson1@gmail.com",
-    "url": "https://www.thompsontechsolutions.net",
+    "url": "https://www.thompsonpcrepair.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "6708 S 53rd St",
@@ -32,13 +32,6 @@
       "@type": "GeoCoordinates",
       "latitude": 41.2100,
       "longitude": -96.0150
-    },
-    "priceRange": "$$",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-      "opens": "08:00",
-      "closes": "19:00"
     }
   }
   </script>
@@ -149,7 +142,6 @@
     .hero-right { width: 300px; flex-shrink: 0; }
     .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(45,106,180,0.2); border: 1px solid rgba(91,163,217,0.3); border-radius: 50px; padding: 6px 16px; font-size: 0.78rem; font-weight: 600; color: var(--sky); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 20px; }
     .hero-badge::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #52b852; animation: blink 1.6s ease-in-out infinite; }
-    .hero-badge.no-dot::before { display: none; }
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
     .hero h1 { font-family: var(--font-head); font-size: clamp(2.4rem,5vw,3.8rem); font-weight: 800; line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 20px; }
     .hero h1 em { font-style: normal; color: var(--sky); }
@@ -407,10 +399,6 @@
 </nav>
 
 <!-- MOBILE MENU DRAWER -->
-<!-- NOTE: The "Get Help Now" CTA below is styled as the orange button via the CSS
-     selector ".mobile-menu ul li:last-child a" (in the <style> block above).
-     If you reorder these menu items, the button styling will move with whatever
-     ends up last. Keep "Get Help Now" as the last <li> to preserve the styling. -->
 <div class="mobile-menu" id="mob-nav" style="display:none;">
   <ul>
     <li><a href="#services" onclick="document.getElementById('mob-nav').style.display='none';document.getElementById('ham-btn').classList.remove('open');">Services</a></li>
@@ -432,7 +420,7 @@
   <div class="hero-inner">
     <div class="hero-two-col">
       <div class="hero-left">
-        <div class="hero-badge no-dot">Serving the Omaha Area Since 2009</div>
+        <div class="hero-badge">Available Now &mdash; Omaha, NE</div>
         <h1>Expert Tech Help.<br><em>Personal Touch.</em></h1>
         <p class="hero-sub">Todd Thompson brings 15+ years of hands-on experience directly to you. Computer repair, managed protection plans, and website design &mdash; done right, at honest prices.</p>
         <div class="hero-buttons">
@@ -445,7 +433,7 @@
         <div class="hero-trust">
           <span class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>5-Star Google Rating</span>
           <span class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>15+ Years Experience</span>
-          <span class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Serving Omaha Since 2009</span>
+          <span class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Omaha Locals Served</span>
           <span class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Same-Day Available</span>
         </div>
       </div>
@@ -744,7 +732,7 @@
       <div class="pricing-card">
         <div class="pricing-type">On-Site Visit</div>
         <div class="pricing-price">$129<small>/visit</small></div>
-        <p class="pricing-desc">We come to you across the greater Omaha metro area.*</p>
+        <p class="pricing-desc">We come to you across the greater Omaha metro area.</p>
         <ul class="pricing-features">
           <li>Network &amp; Wi-Fi setup</li>
           <li>Multi-device support</li>
@@ -752,6 +740,7 @@
           <li>Business IT support</li>
           <li>Additional hours $89/hr</li>
         </ul>
+        <p style="font-size:0.72rem; color:rgba(184,217,240,0.6); margin-top:12px; line-height:1.4;">*Travel fees may apply outside Bellevue, Papillion, La Vista, Ralston &amp; Millard — ask for a free quote.</p>
         <a href="#contact" class="pricing-cta">Schedule On-Site</a>
       </div>
       <div class="pricing-card">
@@ -768,7 +757,6 @@
         <a href="#care-plans" class="pricing-cta">View All Care Plans</a>
       </div>
     </div>
-    <p style="font-size:0.78rem; color:rgba(184,217,240,0.6); margin-top:18px; line-height:1.5; text-align:center;">*On-site visits include Omaha, Bellevue, Papillion, La Vista, Ralston &amp; Millard. Travel fees may apply outside these areas &mdash; ask for a free quote.</p>
     <div class="pricing-web-note">
       <p><strong>Need a website?</strong> Clean, modern 5&ndash;8 page sites starting at <strong>$499</strong> one-time setup. Add optional monthly maintenance &amp; hosting for just <strong>$49/mo</strong> &mdash; includes updates, security, and uptime monitoring. Perfect for small businesses and individuals ready to get online.</p>
       <a href="#contact">Get a Website Quote &rarr;</a>
@@ -836,7 +824,7 @@
         <h3 style="font-family:var(--font-head);font-size:1.15rem;margin-bottom:20px;">Send a Message</h3>
         <form id="contact-form" action="https://formspree.io/f/mjgepbzb" method="POST">
           <input type="hidden" name="_subject" value="New Thompson Tech Solutions Inquiry" />
-          <input type="hidden" name="_next" value="https://www.thompsontechsolutions.net/#contact" />
+          <input type="hidden" name="_next" value="https://www.thompsonpcrepair.com/#contact" />
           <div class="form-row">
             <div class="form-group">
               <label for="name">Your Name</label>
